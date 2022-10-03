@@ -1,0 +1,65 @@
+function res = stDTF(ts,low_freq,high_freq,order,fs)
+% DTF - perform Directed Transfer Function analysis among multi-channel time series. 
+%
+
+% Default sampling rate is 400 Hz
+if nargin < 5
+    fs = 512;
+end
+
+% The number of frequencies to compute the DTF over
+tot_range = [low_freq:high_freq];
+nfre = length(tot_range);
+
+% The number of channels in the time series
+nchan = size(ts,1);
+
+% The sampling period
+dt = 1/fs;
+
+% Create the MVAR matrix for the time series
+[A,e] = mmvar(ts,order);
+
+% Rearrange the format of the MVAR matrix
+B = [];
+B(:,:,1) = -eye(nchan);
+for i=1:order
+    B(:,:,i + 1) = A(:,:,i);
+end
+
+% Calculate the non-normalized DTF value
+theta2 = [];
+for k = 1:nfre
+    Af = zeros(nchan,nchan);
+    fre = tot_range(k);
+    for i = 1:nchan
+        for j = 1:nchan
+            for h = 1:order+1
+                Af(i,j) = Af(i,j)-B(i,j,h)*exp(-pi*fre*dt*(h-1)*2i);
+            end
+        end
+    end
+%     dett2 = det(Af);
+%     dett2 = dett2.*conj(dett2);
+%     for i = 1:nchan
+%         for j = 1:nchan
+%             Apf = Af;
+%             Apf(:,i) = [];
+%             Apf(j,:) = [];
+%             det2 = det(Apf);
+%             det2 = det2.*conj(det2);
+%             theta2(i,j,k) = det2/dett2;
+%         end
+%     end
+    Hf(:,:,) = inv(Af);
+end
+
+% Calculate the normalized DTF values
+gamma2 = [];
+for k=1:nfre
+    for i=1:nchan
+        for j=1:nchan
+            gamma2(i,j,k) = theta2(i,j,k) / sum(theta2(i,:,k),2);
+        end
+    end
+end

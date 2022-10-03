@@ -1,0 +1,57 @@
+function d = discriminant(training, testing, n, lambda, gamma)
+% discriminant was used for discriminant analysis
+%
+% d = discriminant(training, testing, n, lq, lambda, gamma)
+%
+% training: training set, training{1:n}, size(training{1}) = feature number x sample number
+% testing: testing set, testing(feature number x sample number)
+% n:number of classes, integer
+% lq: linear or quadratic discriminant analysis
+% lambda, gamma: regularization parameters
+
+%%
+if nargin < 3
+    error('Not enough arguments!');
+    return;
+end
+
+if nargin > 5
+    error('Too many arguments!');
+    return;
+end
+
+if length(training) ~= n
+    error('Number of classes not match');
+    return;
+end
+
+if nargin <= 4
+    gamma = 0;
+end
+
+if nargin <= 3
+    % typical LDA
+    lambda = 1;
+end
+
+% define training_all
+training_all = [];
+for i = 1:n
+    training_all = [training_all training{i}];
+    
+    % compute mean and covariance for each class
+    avg(i) = mean(training{i},2);
+    covmx(i) = cov(training{i}');
+end
+% compute covariance across all training data
+covmx_all = cov(training_all');
+
+% compute regularized covariance matrix
+for i = 1:n
+    covmx_lambda(i) = (1-lambda)*covmx(i) + lambda*covmx_all;
+    covmx_lambda_gamma(i) = (1-gamma)*covmx_lambda(i) +gamma*trace(covmx_lambda(i))/n*eye(size(covmx_all,1),size(covmx_all,1));
+end
+
+
+
+end

@@ -1,0 +1,10 @@
+function res = multientropy(A)
+
+if(nargin < 3)
+    error('No input data for multientropy!');
+    return;
+end
+
+if length(size(A)) == 1
+    res = entropy(A)
+end

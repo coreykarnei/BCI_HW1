@@ -1,0 +1,12 @@
+function ecogch=EEGFilter(eeg,band,)
+
+for i=1:size(ecogch,1)
+    if band(1)==0
+        Wn=band(2)*2/2;
+        [a,b]=butter(4,Wn,'low');
+    else
+        Wn=[band(1) band(2)]*2/1000;
+        [a,b]=butter(4,Wn,'bandpass');
+    end
+    ecogch(i,:)=filter(a,b,ecogch(i,:));
+end

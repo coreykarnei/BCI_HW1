@@ -1,0 +1,46 @@
+# Meta information about the EEG/MEG data found in the file imptest_test1_2022-08-07_15-32-39_Segment_0.asc
+# The information contained in this file is entierly optional.
+
+# Lines containing only white space or starting with # are
+# considered comments and will be ignored.
+# The lines containig data have simple 'key = value' format.
+# If some information is missing the default value for this parameter is assumed.
+# Only one 'key = value' pair per line is allowed.
+# The numbers can be written as well in scientific as in normal notation.
+
+# Sampling frequency (default: 256)
+SamplingFrequency = 500
+
+# Data type (default: normal)
+# Possible values are 'average' and 'time-frequency'. Please note that they are still not supported.
+#DataType = normal
+
+# Data unit (default: µV)
+# This value can be overwritten for single channels (see below)
+DataUnit = Unit
+
+# Recording start time
+# This time is represented with one of the two format strings:
+# YYYY-MM-DD hh:mm:ss.000
+# or:
+# +hh:mm:ss.000
+RecordingStart = 2022-08-07 15:32:48.716
+
+# Channel unit (if it differs from the one set with DataUnit).
+# These values overwrite the conversion specified via the DataUnit parameter.
+# Note that the dashes (-) will be interpreted
+# as a separator between the active and reference channel names.
+# This means that the channel names are not allowed to contain dashes.
+#Fz-Ref = Unit
+#FC5-Ref = Unit
+#FC1-Ref = Unit
+#FCz-Ref = Unit
+#FC2-Ref = Unit
+#FC6-Ref = Unit
+#C3-Ref = Unit
+#Cz-Ref = Unit
+#C4-Ref = Unit
+#CP5-Ref = Unit
+#CP1-Ref = Unit
+#CP2-Ref = Unit
+#CP6-Ref = Unit

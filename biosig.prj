@@ -1,0 +1,120 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration build-checksum="528347468" file="/Users/core/repositories/BCI_HW1/biosig.prj" location="/Users/core/repositories/BCI_HW1" name="biosig" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>include</param.appname>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.output>${PROJECT_ROOT}/include.mltbx</param.output>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.guid>6bb59304-5c6a-4b24-9587-bff43b1be82d</param.guid>
+    <param.exclude.filters />
+    <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
+    <param.examples />
+    <param.demosxml />
+    <param.apps />
+    <param.registered.apps />
+    <param.docs />
+    <param.getting.started.guide />
+    <param.matlabpath.excludes />
+    <param.javaclasspath.excludes />
+    <param.exported.on.package>false</param.exported.on.package>
+    <param.required.addons />
+    <param.matlab.project.id />
+    <param.matlab.project.name />
+    <param.release.start />
+    <param.release.end />
+    <param.release.current.only>false</param.release.current.only>
+    <param.compatiblity.windows>true</param.compatiblity.windows>
+    <param.compatiblity.macos>true</param.compatiblity.macos>
+    <param.compatiblity.linux>true</param.compatiblity.linux>
+    <param.compatiblity.matlabonline>true</param.compatiblity.matlabonline>
+    <param.installation.map />
+    <param.additional.sw.names />
+    <param.additional.sw.licenses />
+    <param.additional.sw.win.url />
+    <param.additional.sw.mac.url />
+    <param.additional.sw.linux.url />
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.version />
+      <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.exclude.filters />
+      <param.exclude.pcodedmfiles />
+      <param.examples />
+      <param.demosxml />
+      <param.apps />
+      <param.registered.apps />
+      <param.docs />
+      <param.getting.started.guide />
+      <param.matlabpath.excludes />
+      <param.javaclasspath.excludes />
+      <param.exported.on.package />
+      <param.required.addons />
+      <param.matlab.project.id />
+      <param.matlab.project.name />
+      <param.release.start />
+      <param.release.end />
+      <param.release.current.only />
+      <param.compatiblity.windows />
+      <param.compatiblity.macos />
+      <param.compatiblity.linux />
+      <param.compatiblity.matlabonline />
+      <param.installation.map />
+      <param.additional.sw.names />
+      <param.additional.sw.licenses />
+      <param.additional.sw.win.url />
+      <param.additional.sw.mac.url />
+      <param.additional.sw.linux.url />
+    </unset>
+    <fileset.rootdir>
+      <file>/Users/core/Downloads/toolboxes/include</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>/Users/core/Downloads/toolboxes/include/.DS_Store</file>
+      <file>/Users/core/Downloads/toolboxes/include/arfit</file>
+      <file>/Users/core/Downloads/toolboxes/include/functions</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded />
+    <fileset.package />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}" name="include.mltbx" optional="false">/Users/core/repositories/BCI_HW1/include.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2022b.app</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>12.5.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
